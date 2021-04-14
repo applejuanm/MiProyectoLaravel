@@ -39,18 +39,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        $this->mapPanelRoutes();
-
         //
     }
-
-    protected function mapPanelRoutes()
-    {
-        Route::middleware('web')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/panel.php'));
-    }
-
 
     /**
      * Define the "web" routes for the application.

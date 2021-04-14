@@ -11,5 +11,9 @@
 |
 */
 
-Route::get('/saludar/{nombre}/{apellido?}', 'MiControlador@saludar');
+use Illuminate\Support\Facades\Route;
+
+
+Route::get('/{nombre?}', 'NuevoControlador@principal');
+
 
